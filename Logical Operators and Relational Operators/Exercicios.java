@@ -1,5 +1,3 @@
-package com.aula13.operadores;
-
 import java.util.Scanner;
 
 public class Exercicios {
