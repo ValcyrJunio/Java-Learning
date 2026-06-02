@@ -1,4 +1,3 @@
-package com.aula17.loopFor.Exercicios;
 import java.util.Scanner;
 
 
