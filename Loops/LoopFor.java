@@ -1,5 +1,3 @@
-package com.aula17.loopFor;
-
 public class LoopFor {
     public static void  main (String[] args){
         //Initialize the integer I here and check if "i" is less than or equal to five
