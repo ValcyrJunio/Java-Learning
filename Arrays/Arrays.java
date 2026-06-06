@@ -16,7 +16,7 @@ public class Arrays {
         for (int i = 0; i < temperature.length ; i++){
             System.out.println("Temperature of Day "+(i+1) + " Is "+ temperature[i]);
         }
-        //to show only the values you can use also this way below
+        //to show only the values you can also use the way below
 
         for (double temp : temperature){
             System.out.println(temp);
