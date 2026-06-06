@@ -35,6 +35,6 @@ public class NumberComparison {
         }
         System.out.println("The bigger number is " + bigger);
         System.out.println("The smaller number is " + smaller);
-        System.out.println("The some of all numbers is "+sum);
+        System.out.println("The sum of all numbers is "+sum);
     }
 }
