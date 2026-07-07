@@ -5,15 +5,14 @@ public class simpleBankTest {
         Scanner scan = new Scanner(System.in);
         simpleBank conta = new simpleBank();
         int option = 0;
-
-        conta.credit = 1200;
+        double value;
         conta.amount = 0;
         conta.usuario = "";
         conta.contatos = new String[5];
 
         while (option != 7) {
-            System.out.println("Select a option -- \n 1 - Change account name \n 2 - Change the money amount \n 3 - Insert a name to contatos list " +
-                    "\n 4 - Check the account balance \n 5- See contacts list \n 6 - Show full balance (credit + balance) \n 7 - leave");
+            System.out.println("Select a option -- \n 1 - Change account name \n 2 - Deposit \n 3 - Insert a name to contatos list " +
+                    "\n 4 - Check the account balance \n 5- See contacts list \n 6 - Withdraw \n 7 - leave");
 
             option = scan.nextInt();
 
@@ -24,9 +23,9 @@ public class simpleBankTest {
                     break;
 
                 case 2:
-                    System.out.println("Type the value to the account balance");
-                    conta.amount = scan.nextInt();
-                    System.out.println("Now you account balance is $ "+conta.amount);
+                    System.out.println("Type the value to deposit");
+                    value = scan.nextDouble();
+                    conta.deposit(value);
                     break;
                 case 3:
                     conta.addContactsToList();
@@ -38,7 +37,9 @@ public class simpleBankTest {
                     conta.showAllContacts();
                     break;
                 case 6:
-                    System.out.println(conta.showFullBalance());
+                    System.out.println("Type the value to withdraw");
+                    value = scan.nextDouble();
+                    conta.withdraw(value);
                     break;
                 default:
                     System.out.println("Invalid option");

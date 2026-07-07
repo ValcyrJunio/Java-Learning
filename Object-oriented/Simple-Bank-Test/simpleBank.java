@@ -6,7 +6,7 @@ public class simpleBank {
 
     String usuario;
     Boolean especial;
-    int amount;
+    double amount;
     int credit;
     String [] contatos;
     int total;
@@ -37,9 +37,23 @@ public class simpleBank {
             System.out.printf(" %d - %s \n", i+1, contatos[i]);
         }
     }
-
+    double deposit(double value){
+         amount += value;
+        System.out.printf("The amount of %.2f successfully deposited to your account \n", value);
+        return amount;
+    }
     double showFullBalance(){
             return credit + amount;
+    }
+    double withdraw(double value){
+        if (amount >= value) {
+            amount -= value;
+            System.out.println("The amount of %.2f was successfully withdrew of your count ");
+            return amount;
+        } else {
+            System.out.println("Not enough money");
+        }
+        return amount;
     }
 
 }
