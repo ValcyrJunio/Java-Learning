@@ -12,7 +12,7 @@ public class simpleBank {
     int total;
 
     void checkAccountBalance(){
-        System.out.printf("%s have the amount of $ %d in your account ", usuario, amount);
+        System.out.printf("%s have the amount of $ %.2f in your account ", usuario, amount);
     }
 
     void addContactsToList(){
@@ -48,7 +48,7 @@ public class simpleBank {
     double withdraw(double value){
         if (amount >= value) {
             amount -= value;
-            System.out.println("The amount of %.2f was successfully withdrew of your count ");
+            System.out.println("The amount of %.2f was successfully withdrew of your count ", value);
             return amount;
         } else {
             System.out.println("Not enough money");
