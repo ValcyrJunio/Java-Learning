@@ -3,9 +3,11 @@ import java.util.Scanner;
 public class simpleBank {
     Scanner scan = new Scanner(System.in);
 
+
     String usuario;
     Boolean especial;
     int amount;
+    int credit;
     String [] contatos;
     int total;
 
@@ -34,6 +36,10 @@ public class simpleBank {
         for (int i = 0 ; i < total ; i++ ){
             System.out.printf(" %d - %s \n", i+1, contatos[i]);
         }
+    }
+
+    double showFullBalance(){
+            return credit + amount;
     }
 
 }
